@@ -32,6 +32,38 @@ class Dom {
     }
     return this
   }
+  get data() {
+    return this.$el.dataset
+  }
+  closest(selector) {
+    return $(this.$el.closest(selector))
+  }
+
+  getCoords() {
+    return this.$el.getBoundingClientRect()
+  }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector)
+  }
+
+  /*
+
+{
+  height: '30px',
+  width: '42px',
+  backgroundColor: red
+  }
+
+*/
+  css(styles = {}) {
+    // for (const style in styles) {
+    //   return this.$el.style[style] = styles[style]
+    // }
+    Object.keys(styles).forEach(key => {
+      this.$el.style[key] = styles[key]
+    })
+  }
 }
 
 export function $(selector) {
