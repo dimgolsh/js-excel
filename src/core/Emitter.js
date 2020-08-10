@@ -26,8 +26,3 @@ export class Emitter {
   }
 }
 
-const emitter = new Emitter()
-
-emitter.subscribe('qwerty', data => console.log('s', data))
-
-emitter.emit('qwerty', 42)
