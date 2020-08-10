@@ -2,11 +2,9 @@ export function parse(value ='') {
   if (value.startsWith('=')) {
     try {
       return eval(value.slice(1))
-    }
-    catch (e) {
+    } catch (e) {
       console.warn('skio', e.message)
     }
-
   }
   return value
 }

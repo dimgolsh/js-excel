@@ -7,9 +7,11 @@ class Dom {
   html(html) {
     if (typeof html === 'string') {
       this.$el.innerHTML = html
+      return this
     }
     return this.$el.outerHTML.trim()
   }
+
   text(text) {
     if (typeof text !== 'undefined') {
       this.$el.textContent = text
