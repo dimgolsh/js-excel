@@ -20,7 +20,6 @@ export class ExcelComponent extends DomListener {
   }
   // уведомляем слушателей про события
   $emit(event, ...args) {
-    console.log(this.emitter)
     const unsub = this.emitter.emit(event, ...args)
     this.unsubscribers.push(unsub)
   }

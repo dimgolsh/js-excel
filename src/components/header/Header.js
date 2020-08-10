@@ -21,7 +21,7 @@ export class Header extends ExcelComponent {
 
     toHTML() {
       const title = this.store.getState().title || defaultTitle
-      console.log(title)
+
       return `<input type="text" class="input" value="${title}">
             <div>
                 <div class="button">
@@ -35,7 +35,7 @@ export class Header extends ExcelComponent {
 
     onInput(event) {
       const $target = $(event.target)
-      console.log(event.target.value)
+
       this.$dispatch(changeTitle($target.text()))
     }
 }

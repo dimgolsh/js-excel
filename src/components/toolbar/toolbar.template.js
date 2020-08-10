@@ -14,8 +14,7 @@ function toButton(button) {
 }
 
 export function createToolbar(state) {
-  console.log(state)
-  console.log(state['fontWeight'])
+
   const buttons = [
     {
       icon: 'format_align_left',

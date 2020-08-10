@@ -24,7 +24,7 @@ function toCell(state, row) {
       ...defaultStyles,
       ...state.stylesState[id]
     })
-    console.log(typeof state.stylesState[id])
+
     return `
   <div 
   class="cell" 
