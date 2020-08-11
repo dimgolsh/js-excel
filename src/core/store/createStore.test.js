@@ -58,7 +58,7 @@ describe('createStore:', () => {
       setTimeout(() => {
         expect(store.getState().count).toBe(1)
         resolve()
-      },1000)
+      }, 1000)
     })
   })
 })
